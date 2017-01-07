@@ -1,2 +1,2 @@
 # fixp
-A simple FIX parser for Rust
+A simple FIX message library for Rust
