@@ -1,15 +1,29 @@
-#[derive(Debug)]
-pub struct Field {
-    id: u8,
-    name: &'static str,
+trait Field {
+    fn tag(&self) -> u8;
 }
 
-pub static ACCOUNT: Field = Field {
-    id: 1,
-    name: "Account",
-};
+#[derive(Debug)]
+pub enum PossDupFlag {
+    YES,
+    NO,
+}
 
-pub static ADV_ID: Field = { 
-    id: 2,
-    name: "AdvId"
+#[derive(Debug)]
+pub struct Name {
+    field: f32,
+}
+
+impl Field for PossDupFlag {
+    fn tag(&self) -> u8 {
+        return 43;
+    }
+}
+
+impl PossDupFlag {
+    fn value(&self) -> char {
+        match *self {
+            PossDupFlag::YES => 'Y',
+            PossDupFlag::NO => 'N',
+        }
+    }
 }
