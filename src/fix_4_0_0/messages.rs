@@ -1,26 +1,26 @@
 use fix_4_0_0::fields::*;
-struct Heartbeat {
+struct HeartbeatMessage {
     test_req_id: Option<TestReqID>,
 }
-struct TestRequest {
+struct TestRequestMessage {
     test_req_id: TestReqID,
 }
-struct ResendRequest {
+struct ResendRequestMessage {
     begin_seq_no: BeginSeqNo,
     end_seq_no: EndSeqNo,
 }
-struct Reject {
+struct RejectMessage {
     ref_seq_num: RefSeqNum,
     text: Option<Text>,
 }
-struct SequenceReset {
+struct SequenceResetMessage {
     gap_fill_flag: Option<GapFillFlag>,
     new_seq_no: NewSeqNo,
 }
-struct Logout {
+struct LogoutMessage {
     text: Option<Text>,
 }
-struct IndicationofInterest {
+struct IndicationofInterestMessage {
     i_o_iid: IOIid,
     i_oi_trans_type: IOITransType,
     i_oi_ref_id: Option<IOIRefID>,
@@ -41,7 +41,7 @@ struct IndicationofInterest {
     i_oi_qualifier: Option<IOIQualifier>,
     text: Option<Text>,
 }
-struct Advertisement {
+struct AdvertisementMessage {
     adv_id: AdvId,
     adv_trans_type: AdvTransType,
     adv_ref_id: Option<AdvRefID>,
@@ -58,7 +58,7 @@ struct Advertisement {
     transact_time: Option<TransactTime>,
     text: Option<Text>,
 }
-struct ExecutionReport {
+struct ExecutionReportMessage {
     order_id: OrderID,
     cl_ord_id: Option<ClOrdID>,
     client_id: Option<ClientID>,
@@ -104,7 +104,7 @@ struct ExecutionReport {
     settl_currency: Option<SettlCurrency>,
     text: Option<Text>,
 }
-struct OrderCancelReject {
+struct OrderCancelRejectMessage {
     order_id: OrderID,
     cl_ord_id: ClOrdID,
     client_id: Option<ClientID>,
@@ -113,13 +113,13 @@ struct OrderCancelReject {
     cxl_rej_reason: Option<CxlRejReason>,
     text: Option<Text>,
 }
-struct Logon {
+struct LogonMessage {
     encrypt_method: EncryptMethod,
     heart_bt_int: HeartBtInt,
     raw_data_length: Option<RawDataLength>,
     raw_data: Option<RawData>,
 }
-struct News {
+struct NewsMessage {
     orig_time: Option<OrigTime>,
     urgency: Option<Urgency>,
     relatd_sym: Option<RelatdSym>,
@@ -128,7 +128,7 @@ struct News {
     raw_data_length: Option<RawDataLength>,
     raw_data: Option<RawData>,
 }
-struct Email {
+struct EmailMessage {
     email_type: EmailType,
     orig_time: Option<OrigTime>,
     relatd_sym: Option<RelatdSym>,
@@ -139,7 +139,7 @@ struct Email {
     raw_data_length: Option<RawDataLength>,
     raw_data: Option<RawData>,
 }
-struct NewOrderSingle {
+struct NewOrderSingleMessage {
     cl_ord_id: ClOrdID,
     client_id: Option<ClientID>,
     exec_broker: Option<ExecBroker>,
@@ -177,7 +177,7 @@ struct NewOrderSingle {
     settl_currency: Option<SettlCurrency>,
     text: Option<Text>,
 }
-struct NewOrderList {
+struct NewOrderListMessage {
     list_id: ListID,
     wave_no: Option<WaveNo>,
     list_seq_no: ListSeqNo,
@@ -218,7 +218,7 @@ struct NewOrderList {
     settl_currency: Option<SettlCurrency>,
     text: Option<Text>,
 }
-struct OrderCancelRequest {
+struct OrderCancelRequestMessage {
     orig_cl_ord_id: OrigClOrdID,
     order_id: Option<OrderID>,
     cl_ord_id: ClOrdID,
@@ -236,7 +236,7 @@ struct OrderCancelRequest {
     order_qty: OrderQty,
     text: Option<Text>,
 }
-struct OrderCancelReplaceRequest {
+struct OrderCancelReplaceRequestMessage {
     order_id: Option<OrderID>,
     client_id: Option<ClientID>,
     exec_broker: Option<ExecBroker>,
@@ -272,7 +272,7 @@ struct OrderCancelReplaceRequest {
     settl_currency: Option<SettlCurrency>,
     text: Option<Text>,
 }
-struct OrderStatusRequest {
+struct OrderStatusRequestMessage {
     order_id: Option<OrderID>,
     cl_ord_id: ClOrdID,
     client_id: Option<ClientID>,
@@ -283,7 +283,7 @@ struct OrderStatusRequest {
     security_desc: Option<SecurityDesc>,
     side: Side,
 }
-struct Allocation {
+struct AllocationMessage {
     alloc_id: AllocID,
     alloc_trans_type: AllocTransType,
     ref_alloc_id: Option<RefAllocID>,
@@ -308,28 +308,28 @@ struct Allocation {
     open_close: Option<OpenClose>,
     text: Option<Text>,
 }
-struct ListCancelRequest {
+struct ListCancelRequestMessage {
     list_id: ListID,
     wave_no: Option<WaveNo>,
     text: Option<Text>,
 }
-struct ListExecute {
+struct ListExecuteMessage {
     list_id: ListID,
     wave_no: Option<WaveNo>,
     text: Option<Text>,
 }
-struct ListStatusRequest {
+struct ListStatusRequestMessage {
     list_id: ListID,
     wave_no: Option<WaveNo>,
     text: Option<Text>,
 }
-struct ListStatus {
+struct ListStatusMessage {
     list_id: ListID,
     wave_no: Option<WaveNo>,
     no_rpts: NoRpts,
     rpt_seq: RptSeq,
 }
-struct AllocationACK {
+struct AllocationACKMessage {
     client_id: Option<ClientID>,
     exec_broker: Option<ExecBroker>,
     alloc_id: AllocID,
@@ -339,7 +339,7 @@ struct AllocationACK {
     alloc_rej_code: Option<AllocRejCode>,
     text: Option<Text>,
 }
-struct DontKnowTrade {
+struct DontKnowTradeMessage {
     order_id: Option<OrderID>,
     exec_id: Option<ExecID>,
     d_k_reason: DKReason,
@@ -350,7 +350,7 @@ struct DontKnowTrade {
     last_px: LastPx,
     text: Option<Text>,
 }
-struct QuoteRequest {
+struct QuoteRequestMessage {
     quote_req_id: QuoteReqID,
     symbol: Symbol,
     symbol_sfx: Option<SymbolSfx>,
@@ -362,7 +362,7 @@ struct QuoteRequest {
     side: Option<Side>,
     order_qty: Option<OrderQty>,
 }
-struct Quote {
+struct QuoteMessage {
     quote_req_id: Option<QuoteReqID>,
     quote_id: QuoteID,
     symbol: Symbol,

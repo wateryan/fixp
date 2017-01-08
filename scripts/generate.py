@@ -8,9 +8,9 @@ from num2words import num2words
 ROOT_DIR = "spec"
 
 F_IMPORTS = "use field::Field;"
-F_TRAIT = "trait Field {fn tag(&self) -> u8;}"
+F_TRAIT = "trait Field {fn tag(&self) -> u16;}"
 F_IMPL_TEMPLATE = Template(
-    "impl Field for $fieldName {fn tag(&self) -> u8 {return $tagNumber;}}")
+    "impl Field for $fieldName {fn tag(&self) -> u16 {return $tagNumber;}}")
 F_ENUM_TEMPLATE = Template(
     "#[derive(Debug)]pub enum $fieldName { $enumValues }")
 F_STRUCT_TEMPLATE = Template(
@@ -24,7 +24,9 @@ M_F_NREQ_TEMPLATE = Template("$fieldName: Option<$fieldType>,")
 # TODO Figure out actual values for this, they're a best guess currently
 TYPES = {
     "AMT": "f32",
+    "BOOLEAN": "bool",
     "CHAR": "char",
+    "COUNTRY": "String",
     "CURRENCY": "f32",
     "DATA": "[u8; 1024]",
     "DATE": "String",
@@ -32,18 +34,27 @@ TYPES = {
     "EXCHANGE": "String",
     "FLOAT": "f32",
     "INT": "u16",
+    "LANGUAGE": "String",
     "LENGTH": "usize",
     "LOCALMKTDATE": "u64",
     "MONTHYEAR": "u8",
+    "MULTIPLECHARVALUE": "String",
+    "NUMINGROUP": "u16",
+    "PERCENTAGE": "f32",
     "PRICE": "f32",
     "PRICEOFFSET": "i8",
     "QTY": "f32",
     "QUANTITY": "f64",
+    "SEQNUM": "u64",
     "STRING": "String",
     "TIME": "u64",
+    "TZTIMEONLY": "u64",
+    "TZTIMESTAMP": "u64",
     "UTCDATE": "String",
+    "UTCDATEONLY": "u16",
     "UTCTIMEONLY": "String",
     "UTCTIMESTAMP": "u64",
+    "XMLDATA": "String",
 }
 
 
@@ -54,7 +65,8 @@ def create_fields(elements):
         fields += "\n" + F_IMPL_TEMPLATE.substitute(
             fieldName=field.get("name"), tagNumber=field.get("number"))
         if field.findall("value"):
-            #  Some of the spec has values such as 5yr which can't be valid enums, so prepend _
+            # Some of the spec has values such as 5yr which can't be valid
+            # enums, so prepend _
             enumset = ",".join("_" + v.get("description").replace("_", "").title()
                                for v in field.findall("value"))
             fields += "\n" + F_ENUM_TEMPLATE.substitute(
@@ -75,7 +87,7 @@ def create_messages(elements):
     fixv = get_import(get_fix_version(elements))
     messages = M_IMPORTS_TEMPLATE.substitute(fixVersion=fixv) + "\n"
     for message in elements.findall("messages/message"):
-        m_name = message.get("name")
+        m_name = message.get("name") + "Message"
         m_fields = ""
         for field in message.findall("field"):
             field_type = field.get("name")
@@ -128,6 +140,7 @@ def export_mods(elements):
     )
 
 for filename in os.listdir(ROOT_DIR):
+    print "Generating code for " + filename
     e = parse_file(filename)
     create_fields(e)
     create_messages(e)

@@ -1,3 +1,3 @@
 pub trait Field {
-    fn tag(&self) -> u8;
+    fn tag(&self) -> u16;
 }

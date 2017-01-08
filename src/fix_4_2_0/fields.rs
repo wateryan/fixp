@@ -1,7 +1,7 @@
 use field::Field;
 
 impl Field for Account {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 1;
     }
 }
@@ -9,7 +9,7 @@ pub struct Account {
     value: String,
 }
 impl Field for AdvId {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 2;
     }
 }
@@ -17,7 +17,7 @@ pub struct AdvId {
     value: String,
 }
 impl Field for AdvRefID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 3;
     }
 }
@@ -25,7 +25,7 @@ pub struct AdvRefID {
     value: String,
 }
 impl Field for AdvSide {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 4;
     }
 }
@@ -37,7 +37,7 @@ pub enum AdvSide {
     _Cross,
 }
 impl Field for AdvTransType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 5;
     }
 }
@@ -48,7 +48,7 @@ pub enum AdvTransType {
     _Replace,
 }
 impl Field for AvgPx {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 6;
     }
 }
@@ -56,7 +56,7 @@ pub struct AvgPx {
     value: f32,
 }
 impl Field for BeginSeqNo {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 7;
     }
 }
@@ -64,7 +64,7 @@ pub struct BeginSeqNo {
     value: u16,
 }
 impl Field for BeginString {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 8;
     }
 }
@@ -72,7 +72,7 @@ pub struct BeginString {
     value: String,
 }
 impl Field for BodyLength {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 9;
     }
 }
@@ -80,7 +80,7 @@ pub struct BodyLength {
     value: u16,
 }
 impl Field for CheckSum {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 10;
     }
 }
@@ -88,7 +88,7 @@ pub struct CheckSum {
     value: String,
 }
 impl Field for ClOrdID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 11;
     }
 }
@@ -96,7 +96,7 @@ pub struct ClOrdID {
     value: String,
 }
 impl Field for Commission {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 12;
     }
 }
@@ -104,7 +104,7 @@ pub struct Commission {
     value: f32,
 }
 impl Field for CommType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 13;
     }
 }
@@ -115,7 +115,7 @@ pub enum CommType {
     _Absolute,
 }
 impl Field for CumQty {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 14;
     }
 }
@@ -123,7 +123,7 @@ pub struct CumQty {
     value: f32,
 }
 impl Field for Currency {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 15;
     }
 }
@@ -131,7 +131,7 @@ pub struct Currency {
     value: f32,
 }
 impl Field for EndSeqNo {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 16;
     }
 }
@@ -139,7 +139,7 @@ pub struct EndSeqNo {
     value: u16,
 }
 impl Field for ExecID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 17;
     }
 }
@@ -147,7 +147,7 @@ pub struct ExecID {
     value: String,
 }
 impl Field for ExecInst {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 18;
     }
 }
@@ -184,7 +184,7 @@ pub enum ExecInst {
     _Pegtovwap,
 }
 impl Field for ExecRefID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 19;
     }
 }
@@ -192,7 +192,7 @@ pub struct ExecRefID {
     value: String,
 }
 impl Field for ExecTransType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 20;
     }
 }
@@ -204,7 +204,7 @@ pub enum ExecTransType {
     _Status,
 }
 impl Field for HandlInst {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 21;
     }
 }
@@ -215,7 +215,7 @@ pub enum HandlInst {
     _Manualorderbestexecution,
 }
 impl Field for IDSource {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 22;
     }
 }
@@ -232,7 +232,7 @@ pub enum IDSource {
     _Consolidatedtapeassociation,
 }
 impl Field for IOIid {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 23;
     }
 }
@@ -240,7 +240,7 @@ pub struct IOIid {
     value: String,
 }
 impl Field for IOIOthSvc {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 24;
     }
 }
@@ -248,7 +248,7 @@ pub struct IOIOthSvc {
     value: char,
 }
 impl Field for IOIQltyInd {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 25;
     }
 }
@@ -259,7 +259,7 @@ pub enum IOIQltyInd {
     _Medium,
 }
 impl Field for IOIRefID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 26;
     }
 }
@@ -267,7 +267,7 @@ pub struct IOIRefID {
     value: String,
 }
 impl Field for IOIShares {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 27;
     }
 }
@@ -278,7 +278,7 @@ pub enum IOIShares {
     _Small,
 }
 impl Field for IOITransType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 28;
     }
 }
@@ -289,7 +289,7 @@ pub enum IOITransType {
     _Replace,
 }
 impl Field for LastCapacity {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 29;
     }
 }
@@ -301,7 +301,7 @@ pub enum LastCapacity {
     _Principal,
 }
 impl Field for LastMkt {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 30;
     }
 }
@@ -309,7 +309,7 @@ pub struct LastMkt {
     value: String,
 }
 impl Field for LastPx {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 31;
     }
 }
@@ -317,7 +317,7 @@ pub struct LastPx {
     value: f32,
 }
 impl Field for LastShares {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 32;
     }
 }
@@ -325,7 +325,7 @@ pub struct LastShares {
     value: f32,
 }
 impl Field for LinesOfText {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 33;
     }
 }
@@ -333,7 +333,7 @@ pub struct LinesOfText {
     value: u16,
 }
 impl Field for MsgSeqNum {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 34;
     }
 }
@@ -341,7 +341,7 @@ pub struct MsgSeqNum {
     value: u16,
 }
 impl Field for MsgType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 35;
     }
 }
@@ -395,7 +395,7 @@ pub enum MsgType {
     _Quotecancel,
 }
 impl Field for NewSeqNo {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 36;
     }
 }
@@ -403,7 +403,7 @@ pub struct NewSeqNo {
     value: u16,
 }
 impl Field for OrderID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 37;
     }
 }
@@ -411,7 +411,7 @@ pub struct OrderID {
     value: String,
 }
 impl Field for OrderQty {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 38;
     }
 }
@@ -419,7 +419,7 @@ pub struct OrderQty {
     value: f32,
 }
 impl Field for OrdStatus {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 39;
     }
 }
@@ -442,7 +442,7 @@ pub enum OrdStatus {
     _Pendingreplace,
 }
 impl Field for OrdType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 40;
     }
 }
@@ -469,7 +469,7 @@ pub enum OrdType {
     _Pegged,
 }
 impl Field for OrigClOrdID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 41;
     }
 }
@@ -477,7 +477,7 @@ pub struct OrigClOrdID {
     value: String,
 }
 impl Field for OrigTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 42;
     }
 }
@@ -485,7 +485,7 @@ pub struct OrigTime {
     value: u64,
 }
 impl Field for PossDupFlag {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 43;
     }
 }
@@ -495,7 +495,7 @@ pub enum PossDupFlag {
     _Yes,
 }
 impl Field for Price {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 44;
     }
 }
@@ -503,7 +503,7 @@ pub struct Price {
     value: f32,
 }
 impl Field for RefSeqNum {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 45;
     }
 }
@@ -511,7 +511,7 @@ pub struct RefSeqNum {
     value: u16,
 }
 impl Field for RelatdSym {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 46;
     }
 }
@@ -519,7 +519,7 @@ pub struct RelatdSym {
     value: String,
 }
 impl Field for Rule80A {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 47;
     }
 }
@@ -550,7 +550,7 @@ pub enum Rule80A {
     _Shortexempttransactionfornonmembercompetingmarketmaker,
 }
 impl Field for SecurityID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 48;
     }
 }
@@ -558,7 +558,7 @@ pub struct SecurityID {
     value: String,
 }
 impl Field for SenderCompID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 49;
     }
 }
@@ -566,7 +566,7 @@ pub struct SenderCompID {
     value: String,
 }
 impl Field for SenderSubID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 50;
     }
 }
@@ -574,7 +574,7 @@ pub struct SenderSubID {
     value: String,
 }
 impl Field for SendingDate {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 51;
     }
 }
@@ -582,7 +582,7 @@ pub struct SendingDate {
     value: u64,
 }
 impl Field for SendingTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 52;
     }
 }
@@ -590,7 +590,7 @@ pub struct SendingTime {
     value: u64,
 }
 impl Field for Shares {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 53;
     }
 }
@@ -598,7 +598,7 @@ pub struct Shares {
     value: f32,
 }
 impl Field for Side {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 54;
     }
 }
@@ -615,7 +615,7 @@ pub enum Side {
     _Crossshort,
 }
 impl Field for Symbol {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 55;
     }
 }
@@ -623,7 +623,7 @@ pub struct Symbol {
     value: String,
 }
 impl Field for TargetCompID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 56;
     }
 }
@@ -631,7 +631,7 @@ pub struct TargetCompID {
     value: String,
 }
 impl Field for TargetSubID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 57;
     }
 }
@@ -639,7 +639,7 @@ pub struct TargetSubID {
     value: String,
 }
 impl Field for Text {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 58;
     }
 }
@@ -647,7 +647,7 @@ pub struct Text {
     value: String,
 }
 impl Field for TimeInForce {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 59;
     }
 }
@@ -662,7 +662,7 @@ pub enum TimeInForce {
     _Goodtilldate,
 }
 impl Field for TransactTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 60;
     }
 }
@@ -670,7 +670,7 @@ pub struct TransactTime {
     value: u64,
 }
 impl Field for Urgency {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 61;
     }
 }
@@ -681,7 +681,7 @@ pub enum Urgency {
     _Background,
 }
 impl Field for ValidUntilTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 62;
     }
 }
@@ -689,7 +689,7 @@ pub struct ValidUntilTime {
     value: u64,
 }
 impl Field for SettlmntTyp {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 63;
     }
 }
@@ -707,7 +707,7 @@ pub enum SettlmntTyp {
     _Tplus5,
 }
 impl Field for FutSettDate {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 64;
     }
 }
@@ -715,7 +715,7 @@ pub struct FutSettDate {
     value: u64,
 }
 impl Field for SymbolSfx {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 65;
     }
 }
@@ -723,7 +723,7 @@ pub struct SymbolSfx {
     value: String,
 }
 impl Field for ListID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 66;
     }
 }
@@ -731,7 +731,7 @@ pub struct ListID {
     value: String,
 }
 impl Field for ListSeqNo {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 67;
     }
 }
@@ -739,7 +739,7 @@ pub struct ListSeqNo {
     value: u16,
 }
 impl Field for TotNoOrders {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 68;
     }
 }
@@ -747,7 +747,7 @@ pub struct TotNoOrders {
     value: u16,
 }
 impl Field for ListExecInst {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 69;
     }
 }
@@ -755,7 +755,7 @@ pub struct ListExecInst {
     value: String,
 }
 impl Field for AllocID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 70;
     }
 }
@@ -763,7 +763,7 @@ pub struct AllocID {
     value: String,
 }
 impl Field for AllocTransType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 71;
     }
 }
@@ -777,7 +777,7 @@ pub enum AllocTransType {
     _Calculatedwithoutpreliminary,
 }
 impl Field for RefAllocID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 72;
     }
 }
@@ -785,7 +785,7 @@ pub struct RefAllocID {
     value: String,
 }
 impl Field for NoOrders {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 73;
     }
 }
@@ -793,7 +793,7 @@ pub struct NoOrders {
     value: u16,
 }
 impl Field for AvgPrxPrecision {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 74;
     }
 }
@@ -801,7 +801,7 @@ pub struct AvgPrxPrecision {
     value: u16,
 }
 impl Field for TradeDate {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 75;
     }
 }
@@ -809,7 +809,7 @@ pub struct TradeDate {
     value: u64,
 }
 impl Field for ExecBroker {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 76;
     }
 }
@@ -817,7 +817,7 @@ pub struct ExecBroker {
     value: String,
 }
 impl Field for OpenClose {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 77;
     }
 }
@@ -827,7 +827,7 @@ pub enum OpenClose {
     _Open,
 }
 impl Field for NoAllocs {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 78;
     }
 }
@@ -835,7 +835,7 @@ pub struct NoAllocs {
     value: u16,
 }
 impl Field for AllocAccount {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 79;
     }
 }
@@ -843,7 +843,7 @@ pub struct AllocAccount {
     value: String,
 }
 impl Field for AllocShares {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 80;
     }
 }
@@ -851,7 +851,7 @@ pub struct AllocShares {
     value: f32,
 }
 impl Field for ProcessCode {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 81;
     }
 }
@@ -866,7 +866,7 @@ pub enum ProcessCode {
     _Plansponsor,
 }
 impl Field for NoRpts {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 82;
     }
 }
@@ -874,7 +874,7 @@ pub struct NoRpts {
     value: u16,
 }
 impl Field for RptSeq {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 83;
     }
 }
@@ -882,7 +882,7 @@ pub struct RptSeq {
     value: u16,
 }
 impl Field for CxlQty {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 84;
     }
 }
@@ -890,7 +890,7 @@ pub struct CxlQty {
     value: f32,
 }
 impl Field for NoDlvyInst {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 85;
     }
 }
@@ -898,7 +898,7 @@ pub struct NoDlvyInst {
     value: u16,
 }
 impl Field for DlvyInst {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 86;
     }
 }
@@ -906,7 +906,7 @@ pub struct DlvyInst {
     value: String,
 }
 impl Field for AllocStatus {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 87;
     }
 }
@@ -918,7 +918,7 @@ pub enum AllocStatus {
     _Received,
 }
 impl Field for AllocRejCode {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 88;
     }
 }
@@ -934,7 +934,7 @@ pub enum AllocRejCode {
     _Other,
 }
 impl Field for Signature {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 89;
     }
 }
@@ -942,7 +942,7 @@ pub struct Signature {
     value: [u8; 1024],
 }
 impl Field for SecureDataLen {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 90;
     }
 }
@@ -950,7 +950,7 @@ pub struct SecureDataLen {
     value: usize,
 }
 impl Field for SecureData {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 91;
     }
 }
@@ -958,7 +958,7 @@ pub struct SecureData {
     value: [u8; 1024],
 }
 impl Field for BrokerOfCredit {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 92;
     }
 }
@@ -966,7 +966,7 @@ pub struct BrokerOfCredit {
     value: String,
 }
 impl Field for SignatureLength {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 93;
     }
 }
@@ -974,7 +974,7 @@ pub struct SignatureLength {
     value: usize,
 }
 impl Field for EmailType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 94;
     }
 }
@@ -985,7 +985,7 @@ pub enum EmailType {
     _Adminreply,
 }
 impl Field for RawDataLength {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 95;
     }
 }
@@ -993,7 +993,7 @@ pub struct RawDataLength {
     value: usize,
 }
 impl Field for RawData {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 96;
     }
 }
@@ -1001,7 +1001,7 @@ pub struct RawData {
     value: [u8; 1024],
 }
 impl Field for PossResend {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 97;
     }
 }
@@ -1011,7 +1011,7 @@ pub enum PossResend {
     _Yes,
 }
 impl Field for EncryptMethod {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 98;
     }
 }
@@ -1026,7 +1026,7 @@ pub enum EncryptMethod {
     _Pemdesmd5,
 }
 impl Field for StopPx {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 99;
     }
 }
@@ -1034,7 +1034,7 @@ pub struct StopPx {
     value: f32,
 }
 impl Field for ExDestination {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 100;
     }
 }
@@ -1042,7 +1042,7 @@ pub struct ExDestination {
     value: String,
 }
 impl Field for CxlRejReason {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 102;
     }
 }
@@ -1054,7 +1054,7 @@ pub enum CxlRejReason {
     _Orderalreadyinpendingcancelorpendingreplacestatus,
 }
 impl Field for OrdRejReason {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 103;
     }
 }
@@ -1071,7 +1071,7 @@ pub enum OrdRejReason {
     _Staleorder,
 }
 impl Field for IOIQualifier {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 104;
     }
 }
@@ -1095,7 +1095,7 @@ pub enum IOIQualifier {
     _Preopen,
 }
 impl Field for WaveNo {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 105;
     }
 }
@@ -1103,7 +1103,7 @@ pub struct WaveNo {
     value: String,
 }
 impl Field for Issuer {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 106;
     }
 }
@@ -1111,7 +1111,7 @@ pub struct Issuer {
     value: String,
 }
 impl Field for SecurityDesc {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 107;
     }
 }
@@ -1119,7 +1119,7 @@ pub struct SecurityDesc {
     value: String,
 }
 impl Field for HeartBtInt {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 108;
     }
 }
@@ -1127,7 +1127,7 @@ pub struct HeartBtInt {
     value: u16,
 }
 impl Field for ClientID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 109;
     }
 }
@@ -1135,7 +1135,7 @@ pub struct ClientID {
     value: String,
 }
 impl Field for MinQty {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 110;
     }
 }
@@ -1143,7 +1143,7 @@ pub struct MinQty {
     value: f32,
 }
 impl Field for MaxFloor {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 111;
     }
 }
@@ -1151,7 +1151,7 @@ pub struct MaxFloor {
     value: f32,
 }
 impl Field for TestReqID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 112;
     }
 }
@@ -1159,7 +1159,7 @@ pub struct TestReqID {
     value: String,
 }
 impl Field for ReportToExch {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 113;
     }
 }
@@ -1169,7 +1169,7 @@ pub enum ReportToExch {
     _Yes,
 }
 impl Field for LocateReqd {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 114;
     }
 }
@@ -1179,7 +1179,7 @@ pub enum LocateReqd {
     _Yes,
 }
 impl Field for OnBehalfOfCompID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 115;
     }
 }
@@ -1187,7 +1187,7 @@ pub struct OnBehalfOfCompID {
     value: String,
 }
 impl Field for OnBehalfOfSubID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 116;
     }
 }
@@ -1195,7 +1195,7 @@ pub struct OnBehalfOfSubID {
     value: String,
 }
 impl Field for QuoteID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 117;
     }
 }
@@ -1203,7 +1203,7 @@ pub struct QuoteID {
     value: String,
 }
 impl Field for NetMoney {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 118;
     }
 }
@@ -1211,7 +1211,7 @@ pub struct NetMoney {
     value: f32,
 }
 impl Field for SettlCurrAmt {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 119;
     }
 }
@@ -1219,7 +1219,7 @@ pub struct SettlCurrAmt {
     value: f32,
 }
 impl Field for SettlCurrency {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 120;
     }
 }
@@ -1227,7 +1227,7 @@ pub struct SettlCurrency {
     value: f32,
 }
 impl Field for ForexReq {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 121;
     }
 }
@@ -1237,7 +1237,7 @@ pub enum ForexReq {
     _Yes,
 }
 impl Field for OrigSendingTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 122;
     }
 }
@@ -1245,7 +1245,7 @@ pub struct OrigSendingTime {
     value: u64,
 }
 impl Field for GapFillFlag {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 123;
     }
 }
@@ -1255,7 +1255,7 @@ pub enum GapFillFlag {
     _Yes,
 }
 impl Field for NoExecs {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 124;
     }
 }
@@ -1263,7 +1263,7 @@ pub struct NoExecs {
     value: u16,
 }
 impl Field for CxlType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 125;
     }
 }
@@ -1271,7 +1271,7 @@ pub struct CxlType {
     value: char,
 }
 impl Field for ExpireTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 126;
     }
 }
@@ -1279,7 +1279,7 @@ pub struct ExpireTime {
     value: u64,
 }
 impl Field for DKReason {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 127;
     }
 }
@@ -1293,7 +1293,7 @@ pub enum DKReason {
     _Other,
 }
 impl Field for DeliverToCompID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 128;
     }
 }
@@ -1301,7 +1301,7 @@ pub struct DeliverToCompID {
     value: String,
 }
 impl Field for DeliverToSubID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 129;
     }
 }
@@ -1309,7 +1309,7 @@ pub struct DeliverToSubID {
     value: String,
 }
 impl Field for IOINaturalFlag {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 130;
     }
 }
@@ -1319,7 +1319,7 @@ pub enum IOINaturalFlag {
     _Yes,
 }
 impl Field for QuoteReqID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 131;
     }
 }
@@ -1327,7 +1327,7 @@ pub struct QuoteReqID {
     value: String,
 }
 impl Field for BidPx {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 132;
     }
 }
@@ -1335,7 +1335,7 @@ pub struct BidPx {
     value: f32,
 }
 impl Field for OfferPx {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 133;
     }
 }
@@ -1343,7 +1343,7 @@ pub struct OfferPx {
     value: f32,
 }
 impl Field for BidSize {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 134;
     }
 }
@@ -1351,7 +1351,7 @@ pub struct BidSize {
     value: f32,
 }
 impl Field for OfferSize {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 135;
     }
 }
@@ -1359,7 +1359,7 @@ pub struct OfferSize {
     value: f32,
 }
 impl Field for NoMiscFees {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 136;
     }
 }
@@ -1367,7 +1367,7 @@ pub struct NoMiscFees {
     value: u16,
 }
 impl Field for MiscFeeAmt {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 137;
     }
 }
@@ -1375,7 +1375,7 @@ pub struct MiscFeeAmt {
     value: f32,
 }
 impl Field for MiscFeeCurr {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 138;
     }
 }
@@ -1383,7 +1383,7 @@ pub struct MiscFeeCurr {
     value: f32,
 }
 impl Field for MiscFeeType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 139;
     }
 }
@@ -1400,7 +1400,7 @@ pub enum MiscFeeType {
     _Consumptiontax,
 }
 impl Field for PrevClosePx {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 140;
     }
 }
@@ -1408,7 +1408,7 @@ pub struct PrevClosePx {
     value: f32,
 }
 impl Field for ResetSeqNumFlag {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 141;
     }
 }
@@ -1418,7 +1418,7 @@ pub enum ResetSeqNumFlag {
     _Yes,
 }
 impl Field for SenderLocationID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 142;
     }
 }
@@ -1426,7 +1426,7 @@ pub struct SenderLocationID {
     value: String,
 }
 impl Field for TargetLocationID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 143;
     }
 }
@@ -1434,7 +1434,7 @@ pub struct TargetLocationID {
     value: String,
 }
 impl Field for OnBehalfOfLocationID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 144;
     }
 }
@@ -1442,7 +1442,7 @@ pub struct OnBehalfOfLocationID {
     value: String,
 }
 impl Field for DeliverToLocationID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 145;
     }
 }
@@ -1450,7 +1450,7 @@ pub struct DeliverToLocationID {
     value: String,
 }
 impl Field for NoRelatedSym {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 146;
     }
 }
@@ -1458,7 +1458,7 @@ pub struct NoRelatedSym {
     value: u16,
 }
 impl Field for Subject {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 147;
     }
 }
@@ -1466,7 +1466,7 @@ pub struct Subject {
     value: String,
 }
 impl Field for Headline {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 148;
     }
 }
@@ -1474,7 +1474,7 @@ pub struct Headline {
     value: String,
 }
 impl Field for URLLink {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 149;
     }
 }
@@ -1482,7 +1482,7 @@ pub struct URLLink {
     value: String,
 }
 impl Field for ExecType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 150;
     }
 }
@@ -1505,7 +1505,7 @@ pub enum ExecType {
     _Pendingreplace,
 }
 impl Field for LeavesQty {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 151;
     }
 }
@@ -1513,7 +1513,7 @@ pub struct LeavesQty {
     value: f32,
 }
 impl Field for CashOrderQty {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 152;
     }
 }
@@ -1521,7 +1521,7 @@ pub struct CashOrderQty {
     value: f32,
 }
 impl Field for AllocAvgPx {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 153;
     }
 }
@@ -1529,7 +1529,7 @@ pub struct AllocAvgPx {
     value: f32,
 }
 impl Field for AllocNetMoney {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 154;
     }
 }
@@ -1537,7 +1537,7 @@ pub struct AllocNetMoney {
     value: f32,
 }
 impl Field for SettlCurrFxRate {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 155;
     }
 }
@@ -1545,7 +1545,7 @@ pub struct SettlCurrFxRate {
     value: f32,
 }
 impl Field for SettlCurrFxRateCalc {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 156;
     }
 }
@@ -1555,7 +1555,7 @@ pub enum SettlCurrFxRateCalc {
     _Divide,
 }
 impl Field for NumDaysInterest {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 157;
     }
 }
@@ -1563,7 +1563,7 @@ pub struct NumDaysInterest {
     value: u16,
 }
 impl Field for AccruedInterestRate {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 158;
     }
 }
@@ -1571,7 +1571,7 @@ pub struct AccruedInterestRate {
     value: f32,
 }
 impl Field for AccruedInterestAmt {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 159;
     }
 }
@@ -1579,7 +1579,7 @@ pub struct AccruedInterestAmt {
     value: f32,
 }
 impl Field for SettlInstMode {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 160;
     }
 }
@@ -1591,7 +1591,7 @@ pub enum SettlInstMode {
     _Specificallocationaccountstanding,
 }
 impl Field for AllocText {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 161;
     }
 }
@@ -1599,7 +1599,7 @@ pub struct AllocText {
     value: String,
 }
 impl Field for SettlInstID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 162;
     }
 }
@@ -1607,7 +1607,7 @@ pub struct SettlInstID {
     value: String,
 }
 impl Field for SettlInstTransType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 163;
     }
 }
@@ -1618,7 +1618,7 @@ pub enum SettlInstTransType {
     _Replace,
 }
 impl Field for EmailThreadID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 164;
     }
 }
@@ -1626,7 +1626,7 @@ pub struct EmailThreadID {
     value: String,
 }
 impl Field for SettlInstSource {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 165;
     }
 }
@@ -1636,7 +1636,7 @@ pub enum SettlInstSource {
     _Institutionsinstructions,
 }
 impl Field for SettlLocation {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 166;
     }
 }
@@ -1651,7 +1651,7 @@ pub enum SettlLocation {
     _Participanttrustcompany,
 }
 impl Field for SecurityType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 167;
     }
 }
@@ -1692,7 +1692,7 @@ pub enum SecurityType {
     _Catstigerslions,
 }
 impl Field for EffectiveTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 168;
     }
 }
@@ -1700,7 +1700,7 @@ pub struct EffectiveTime {
     value: u64,
 }
 impl Field for StandInstDbType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 169;
     }
 }
@@ -1712,7 +1712,7 @@ pub enum StandInstDbType {
     _Aglobalcustodian,
 }
 impl Field for StandInstDbName {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 170;
     }
 }
@@ -1720,7 +1720,7 @@ pub struct StandInstDbName {
     value: String,
 }
 impl Field for StandInstDbID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 171;
     }
 }
@@ -1728,7 +1728,7 @@ pub struct StandInstDbID {
     value: String,
 }
 impl Field for SettlDeliveryType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 172;
     }
 }
@@ -1736,7 +1736,7 @@ pub struct SettlDeliveryType {
     value: u16,
 }
 impl Field for SettlDepositoryCode {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 173;
     }
 }
@@ -1744,7 +1744,7 @@ pub struct SettlDepositoryCode {
     value: String,
 }
 impl Field for SettlBrkrCode {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 174;
     }
 }
@@ -1752,7 +1752,7 @@ pub struct SettlBrkrCode {
     value: String,
 }
 impl Field for SettlInstCode {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 175;
     }
 }
@@ -1760,7 +1760,7 @@ pub struct SettlInstCode {
     value: String,
 }
 impl Field for SecuritySettlAgentName {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 176;
     }
 }
@@ -1768,7 +1768,7 @@ pub struct SecuritySettlAgentName {
     value: String,
 }
 impl Field for SecuritySettlAgentCode {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 177;
     }
 }
@@ -1776,7 +1776,7 @@ pub struct SecuritySettlAgentCode {
     value: String,
 }
 impl Field for SecuritySettlAgentAcctNum {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 178;
     }
 }
@@ -1784,7 +1784,7 @@ pub struct SecuritySettlAgentAcctNum {
     value: String,
 }
 impl Field for SecuritySettlAgentAcctName {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 179;
     }
 }
@@ -1792,7 +1792,7 @@ pub struct SecuritySettlAgentAcctName {
     value: String,
 }
 impl Field for SecuritySettlAgentContactName {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 180;
     }
 }
@@ -1800,7 +1800,7 @@ pub struct SecuritySettlAgentContactName {
     value: String,
 }
 impl Field for SecuritySettlAgentContactPhone {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 181;
     }
 }
@@ -1808,7 +1808,7 @@ pub struct SecuritySettlAgentContactPhone {
     value: String,
 }
 impl Field for CashSettlAgentName {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 182;
     }
 }
@@ -1816,7 +1816,7 @@ pub struct CashSettlAgentName {
     value: String,
 }
 impl Field for CashSettlAgentCode {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 183;
     }
 }
@@ -1824,7 +1824,7 @@ pub struct CashSettlAgentCode {
     value: String,
 }
 impl Field for CashSettlAgentAcctNum {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 184;
     }
 }
@@ -1832,7 +1832,7 @@ pub struct CashSettlAgentAcctNum {
     value: String,
 }
 impl Field for CashSettlAgentAcctName {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 185;
     }
 }
@@ -1840,7 +1840,7 @@ pub struct CashSettlAgentAcctName {
     value: String,
 }
 impl Field for CashSettlAgentContactName {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 186;
     }
 }
@@ -1848,7 +1848,7 @@ pub struct CashSettlAgentContactName {
     value: String,
 }
 impl Field for CashSettlAgentContactPhone {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 187;
     }
 }
@@ -1856,7 +1856,7 @@ pub struct CashSettlAgentContactPhone {
     value: String,
 }
 impl Field for BidSpotRate {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 188;
     }
 }
@@ -1864,7 +1864,7 @@ pub struct BidSpotRate {
     value: f32,
 }
 impl Field for BidForwardPoints {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 189;
     }
 }
@@ -1872,7 +1872,7 @@ pub struct BidForwardPoints {
     value: i8,
 }
 impl Field for OfferSpotRate {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 190;
     }
 }
@@ -1880,7 +1880,7 @@ pub struct OfferSpotRate {
     value: f32,
 }
 impl Field for OfferForwardPoints {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 191;
     }
 }
@@ -1888,7 +1888,7 @@ pub struct OfferForwardPoints {
     value: i8,
 }
 impl Field for OrderQty2 {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 192;
     }
 }
@@ -1896,7 +1896,7 @@ pub struct OrderQty2 {
     value: f32,
 }
 impl Field for FutSettDate2 {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 193;
     }
 }
@@ -1904,7 +1904,7 @@ pub struct FutSettDate2 {
     value: u64,
 }
 impl Field for LastSpotRate {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 194;
     }
 }
@@ -1912,7 +1912,7 @@ pub struct LastSpotRate {
     value: f32,
 }
 impl Field for LastForwardPoints {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 195;
     }
 }
@@ -1920,7 +1920,7 @@ pub struct LastForwardPoints {
     value: i8,
 }
 impl Field for AllocLinkID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 196;
     }
 }
@@ -1928,7 +1928,7 @@ pub struct AllocLinkID {
     value: String,
 }
 impl Field for AllocLinkType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 197;
     }
 }
@@ -1938,7 +1938,7 @@ pub enum AllocLinkType {
     _Fxswap,
 }
 impl Field for SecondaryOrderID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 198;
     }
 }
@@ -1946,7 +1946,7 @@ pub struct SecondaryOrderID {
     value: String,
 }
 impl Field for NoIOIQualifiers {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 199;
     }
 }
@@ -1954,7 +1954,7 @@ pub struct NoIOIQualifiers {
     value: u16,
 }
 impl Field for MaturityMonthYear {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 200;
     }
 }
@@ -1962,7 +1962,7 @@ pub struct MaturityMonthYear {
     value: u8,
 }
 impl Field for PutOrCall {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 201;
     }
 }
@@ -1972,7 +1972,7 @@ pub enum PutOrCall {
     _Call,
 }
 impl Field for StrikePrice {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 202;
     }
 }
@@ -1980,7 +1980,7 @@ pub struct StrikePrice {
     value: f32,
 }
 impl Field for CoveredOrUncovered {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 203;
     }
 }
@@ -1990,7 +1990,7 @@ pub enum CoveredOrUncovered {
     _Uncovered,
 }
 impl Field for CustomerOrFirm {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 204;
     }
 }
@@ -2000,7 +2000,7 @@ pub enum CustomerOrFirm {
     _Firm,
 }
 impl Field for MaturityDay {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 205;
     }
 }
@@ -2008,7 +2008,7 @@ pub struct MaturityDay {
     value: u8,
 }
 impl Field for OptAttribute {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 206;
     }
 }
@@ -2016,7 +2016,7 @@ pub struct OptAttribute {
     value: char,
 }
 impl Field for SecurityExchange {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 207;
     }
 }
@@ -2024,7 +2024,7 @@ pub struct SecurityExchange {
     value: String,
 }
 impl Field for NotifyBrokerOfCredit {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 208;
     }
 }
@@ -2034,7 +2034,7 @@ pub enum NotifyBrokerOfCredit {
     _Yes,
 }
 impl Field for AllocHandlInst {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 209;
     }
 }
@@ -2045,7 +2045,7 @@ pub enum AllocHandlInst {
     _Forwardandmatch,
 }
 impl Field for MaxShow {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 210;
     }
 }
@@ -2053,7 +2053,7 @@ pub struct MaxShow {
     value: f32,
 }
 impl Field for PegDifference {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 211;
     }
 }
@@ -2061,7 +2061,7 @@ pub struct PegDifference {
     value: i8,
 }
 impl Field for XmlDataLen {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 212;
     }
 }
@@ -2069,7 +2069,7 @@ pub struct XmlDataLen {
     value: usize,
 }
 impl Field for XmlData {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 213;
     }
 }
@@ -2077,7 +2077,7 @@ pub struct XmlData {
     value: [u8; 1024],
 }
 impl Field for SettlInstRefID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 214;
     }
 }
@@ -2085,7 +2085,7 @@ pub struct SettlInstRefID {
     value: String,
 }
 impl Field for NoRoutingIDs {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 215;
     }
 }
@@ -2093,7 +2093,7 @@ pub struct NoRoutingIDs {
     value: u16,
 }
 impl Field for RoutingType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 216;
     }
 }
@@ -2105,7 +2105,7 @@ pub enum RoutingType {
     _Blocklist,
 }
 impl Field for RoutingID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 217;
     }
 }
@@ -2113,7 +2113,7 @@ pub struct RoutingID {
     value: String,
 }
 impl Field for SpreadToBenchmark {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 218;
     }
 }
@@ -2121,7 +2121,7 @@ pub struct SpreadToBenchmark {
     value: i8,
 }
 impl Field for Benchmark {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 219;
     }
 }
@@ -2138,7 +2138,7 @@ pub enum Benchmark {
     _6Molibor,
 }
 impl Field for CouponRate {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 223;
     }
 }
@@ -2146,7 +2146,7 @@ pub struct CouponRate {
     value: f32,
 }
 impl Field for ContractMultiplier {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 231;
     }
 }
@@ -2154,7 +2154,7 @@ pub struct ContractMultiplier {
     value: f32,
 }
 impl Field for MDReqID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 262;
     }
 }
@@ -2162,7 +2162,7 @@ pub struct MDReqID {
     value: String,
 }
 impl Field for SubscriptionRequestType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 263;
     }
 }
@@ -2173,7 +2173,7 @@ pub enum SubscriptionRequestType {
     _Disableprevioussnapshotplusupdaterequest,
 }
 impl Field for MarketDepth {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 264;
     }
 }
@@ -2181,7 +2181,7 @@ pub struct MarketDepth {
     value: u16,
 }
 impl Field for MDUpdateType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 265;
     }
 }
@@ -2191,7 +2191,7 @@ pub enum MDUpdateType {
     _Incrementalrefresh,
 }
 impl Field for AggregatedBook {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 266;
     }
 }
@@ -2201,7 +2201,7 @@ pub enum AggregatedBook {
     _Yes,
 }
 impl Field for NoMDEntryTypes {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 267;
     }
 }
@@ -2209,7 +2209,7 @@ pub struct NoMDEntryTypes {
     value: u16,
 }
 impl Field for NoMDEntries {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 268;
     }
 }
@@ -2217,7 +2217,7 @@ pub struct NoMDEntries {
     value: u16,
 }
 impl Field for MDEntryType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 269;
     }
 }
@@ -2235,7 +2235,7 @@ pub enum MDEntryType {
     _Tradingsessionvwapprice,
 }
 impl Field for MDEntryPx {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 270;
     }
 }
@@ -2243,7 +2243,7 @@ pub struct MDEntryPx {
     value: f32,
 }
 impl Field for MDEntrySize {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 271;
     }
 }
@@ -2251,7 +2251,7 @@ pub struct MDEntrySize {
     value: f32,
 }
 impl Field for MDEntryDate {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 272;
     }
 }
@@ -2259,7 +2259,7 @@ pub struct MDEntryDate {
     value: String,
 }
 impl Field for MDEntryTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 273;
     }
 }
@@ -2267,7 +2267,7 @@ pub struct MDEntryTime {
     value: String,
 }
 impl Field for TickDirection {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 274;
     }
 }
@@ -2279,7 +2279,7 @@ pub enum TickDirection {
     _Zerominustick,
 }
 impl Field for MDMkt {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 275;
     }
 }
@@ -2287,7 +2287,7 @@ pub struct MDMkt {
     value: String,
 }
 impl Field for QuoteCondition {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 276;
     }
 }
@@ -2304,7 +2304,7 @@ pub enum QuoteCondition {
     _Nonfirm,
 }
 impl Field for TradeCondition {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 277;
     }
 }
@@ -2326,7 +2326,7 @@ pub enum TradeCondition {
     _Stoppedstock,
 }
 impl Field for MDEntryID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 278;
     }
 }
@@ -2334,7 +2334,7 @@ pub struct MDEntryID {
     value: String,
 }
 impl Field for MDUpdateAction {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 279;
     }
 }
@@ -2345,7 +2345,7 @@ pub enum MDUpdateAction {
     _Delete,
 }
 impl Field for MDEntryRefID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 280;
     }
 }
@@ -2353,7 +2353,7 @@ pub struct MDEntryRefID {
     value: String,
 }
 impl Field for MDReqRejReason {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 281;
     }
 }
@@ -2370,7 +2370,7 @@ pub enum MDReqRejReason {
     _Unsupportedmdentrytype,
 }
 impl Field for MDEntryOriginator {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 282;
     }
 }
@@ -2378,7 +2378,7 @@ pub struct MDEntryOriginator {
     value: String,
 }
 impl Field for LocationID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 283;
     }
 }
@@ -2386,7 +2386,7 @@ pub struct LocationID {
     value: String,
 }
 impl Field for DeskID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 284;
     }
 }
@@ -2394,7 +2394,7 @@ pub struct DeskID {
     value: String,
 }
 impl Field for DeleteReason {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 285;
     }
 }
@@ -2404,7 +2404,7 @@ pub enum DeleteReason {
     _Error,
 }
 impl Field for OpenCloseSettleFlag {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 286;
     }
 }
@@ -2415,7 +2415,7 @@ pub enum OpenCloseSettleFlag {
     _Deliverysettlementprice,
 }
 impl Field for SellerDays {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 287;
     }
 }
@@ -2423,7 +2423,7 @@ pub struct SellerDays {
     value: u16,
 }
 impl Field for MDEntryBuyer {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 288;
     }
 }
@@ -2431,7 +2431,7 @@ pub struct MDEntryBuyer {
     value: String,
 }
 impl Field for MDEntrySeller {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 289;
     }
 }
@@ -2439,7 +2439,7 @@ pub struct MDEntrySeller {
     value: String,
 }
 impl Field for MDEntryPositionNo {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 290;
     }
 }
@@ -2447,7 +2447,7 @@ pub struct MDEntryPositionNo {
     value: u16,
 }
 impl Field for FinancialStatus {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 291;
     }
 }
@@ -2456,7 +2456,7 @@ pub enum FinancialStatus {
     _Bankrupt,
 }
 impl Field for CorporateAction {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 292;
     }
 }
@@ -2469,7 +2469,7 @@ pub enum CorporateAction {
     _Exinterest,
 }
 impl Field for DefBidSize {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 293;
     }
 }
@@ -2477,7 +2477,7 @@ pub struct DefBidSize {
     value: f32,
 }
 impl Field for DefOfferSize {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 294;
     }
 }
@@ -2485,7 +2485,7 @@ pub struct DefOfferSize {
     value: f32,
 }
 impl Field for NoQuoteEntries {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 295;
     }
 }
@@ -2493,7 +2493,7 @@ pub struct NoQuoteEntries {
     value: u16,
 }
 impl Field for NoQuoteSets {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 296;
     }
 }
@@ -2501,7 +2501,7 @@ pub struct NoQuoteSets {
     value: u16,
 }
 impl Field for QuoteAckStatus {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 297;
     }
 }
@@ -2515,7 +2515,7 @@ pub enum QuoteAckStatus {
     _Rejected,
 }
 impl Field for QuoteCancelType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 298;
     }
 }
@@ -2527,7 +2527,7 @@ pub enum QuoteCancelType {
     _Cancelforallquotes,
 }
 impl Field for QuoteEntryID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 299;
     }
 }
@@ -2535,7 +2535,7 @@ pub struct QuoteEntryID {
     value: String,
 }
 impl Field for QuoteRejectReason {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 300;
     }
 }
@@ -2552,7 +2552,7 @@ pub enum QuoteRejectReason {
     _Notauthorizedtoquotesecurity,
 }
 impl Field for QuoteResponseLevel {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 301;
     }
 }
@@ -2563,7 +2563,7 @@ pub enum QuoteResponseLevel {
     _Acknowledgeeachquotemessages,
 }
 impl Field for QuoteSetID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 302;
     }
 }
@@ -2571,7 +2571,7 @@ pub struct QuoteSetID {
     value: String,
 }
 impl Field for QuoteRequestType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 303;
     }
 }
@@ -2581,7 +2581,7 @@ pub enum QuoteRequestType {
     _Automatic,
 }
 impl Field for TotQuoteEntries {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 304;
     }
 }
@@ -2589,7 +2589,7 @@ pub struct TotQuoteEntries {
     value: u16,
 }
 impl Field for UnderlyingIDSource {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 305;
     }
 }
@@ -2597,7 +2597,7 @@ pub struct UnderlyingIDSource {
     value: String,
 }
 impl Field for UnderlyingIssuer {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 306;
     }
 }
@@ -2605,7 +2605,7 @@ pub struct UnderlyingIssuer {
     value: String,
 }
 impl Field for UnderlyingSecurityDesc {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 307;
     }
 }
@@ -2613,7 +2613,7 @@ pub struct UnderlyingSecurityDesc {
     value: String,
 }
 impl Field for UnderlyingSecurityExchange {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 308;
     }
 }
@@ -2621,7 +2621,7 @@ pub struct UnderlyingSecurityExchange {
     value: String,
 }
 impl Field for UnderlyingSecurityID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 309;
     }
 }
@@ -2629,7 +2629,7 @@ pub struct UnderlyingSecurityID {
     value: String,
 }
 impl Field for UnderlyingSecurityType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 310;
     }
 }
@@ -2637,7 +2637,7 @@ pub struct UnderlyingSecurityType {
     value: String,
 }
 impl Field for UnderlyingSymbol {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 311;
     }
 }
@@ -2645,7 +2645,7 @@ pub struct UnderlyingSymbol {
     value: String,
 }
 impl Field for UnderlyingSymbolSfx {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 312;
     }
 }
@@ -2653,7 +2653,7 @@ pub struct UnderlyingSymbolSfx {
     value: String,
 }
 impl Field for UnderlyingMaturityMonthYear {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 313;
     }
 }
@@ -2661,7 +2661,7 @@ pub struct UnderlyingMaturityMonthYear {
     value: u8,
 }
 impl Field for UnderlyingMaturityDay {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 314;
     }
 }
@@ -2669,7 +2669,7 @@ pub struct UnderlyingMaturityDay {
     value: u8,
 }
 impl Field for UnderlyingPutOrCall {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 315;
     }
 }
@@ -2677,7 +2677,7 @@ pub struct UnderlyingPutOrCall {
     value: u16,
 }
 impl Field for UnderlyingStrikePrice {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 316;
     }
 }
@@ -2685,7 +2685,7 @@ pub struct UnderlyingStrikePrice {
     value: f32,
 }
 impl Field for UnderlyingOptAttribute {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 317;
     }
 }
@@ -2693,7 +2693,7 @@ pub struct UnderlyingOptAttribute {
     value: char,
 }
 impl Field for UnderlyingCurrency {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 318;
     }
 }
@@ -2701,7 +2701,7 @@ pub struct UnderlyingCurrency {
     value: f32,
 }
 impl Field for RatioQty {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 319;
     }
 }
@@ -2709,7 +2709,7 @@ pub struct RatioQty {
     value: f64,
 }
 impl Field for SecurityReqID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 320;
     }
 }
@@ -2717,7 +2717,7 @@ pub struct SecurityReqID {
     value: String,
 }
 impl Field for SecurityRequestType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 321;
     }
 }
@@ -2729,7 +2729,7 @@ pub enum SecurityRequestType {
     _Requestlistsecurities,
 }
 impl Field for SecurityResponseID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 322;
     }
 }
@@ -2737,7 +2737,7 @@ pub struct SecurityResponseID {
     value: String,
 }
 impl Field for SecurityResponseType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 323;
     }
 }
@@ -2751,7 +2751,7 @@ pub enum SecurityResponseType {
     _Cannotmatchselectioncriteria,
 }
 impl Field for SecurityStatusReqID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 324;
     }
 }
@@ -2759,7 +2759,7 @@ pub struct SecurityStatusReqID {
     value: String,
 }
 impl Field for UnsolicitedIndicator {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 325;
     }
 }
@@ -2769,7 +2769,7 @@ pub enum UnsolicitedIndicator {
     _Yes,
 }
 impl Field for SecurityTradingStatus {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 326;
     }
 }
@@ -2797,7 +2797,7 @@ pub enum SecurityTradingStatus {
     _Marketoncloseimbalancebuy,
 }
 impl Field for HaltReasonChar {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 327;
     }
 }
@@ -2811,7 +2811,7 @@ pub enum HaltReasonChar {
     _Equipmentchangeover,
 }
 impl Field for InViewOfCommon {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 328;
     }
 }
@@ -2821,7 +2821,7 @@ pub enum InViewOfCommon {
     _Yes,
 }
 impl Field for DueToRelated {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 329;
     }
 }
@@ -2831,7 +2831,7 @@ pub enum DueToRelated {
     _Yes,
 }
 impl Field for BuyVolume {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 330;
     }
 }
@@ -2839,7 +2839,7 @@ pub struct BuyVolume {
     value: f32,
 }
 impl Field for SellVolume {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 331;
     }
 }
@@ -2847,7 +2847,7 @@ pub struct SellVolume {
     value: f32,
 }
 impl Field for HighPx {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 332;
     }
 }
@@ -2855,7 +2855,7 @@ pub struct HighPx {
     value: f32,
 }
 impl Field for LowPx {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 333;
     }
 }
@@ -2863,7 +2863,7 @@ pub struct LowPx {
     value: f32,
 }
 impl Field for Adjustment {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 334;
     }
 }
@@ -2874,7 +2874,7 @@ pub enum Adjustment {
     _Correction,
 }
 impl Field for TradSesReqID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 335;
     }
 }
@@ -2882,7 +2882,7 @@ pub struct TradSesReqID {
     value: String,
 }
 impl Field for TradingSessionID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 336;
     }
 }
@@ -2890,7 +2890,7 @@ pub struct TradingSessionID {
     value: String,
 }
 impl Field for ContraTrader {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 337;
     }
 }
@@ -2898,7 +2898,7 @@ pub struct ContraTrader {
     value: String,
 }
 impl Field for TradSesMethod {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 338;
     }
 }
@@ -2909,7 +2909,7 @@ pub enum TradSesMethod {
     _Twoparty,
 }
 impl Field for TradSesMode {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 339;
     }
 }
@@ -2920,7 +2920,7 @@ pub enum TradSesMode {
     _Production,
 }
 impl Field for TradSesStatus {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 340;
     }
 }
@@ -2933,7 +2933,7 @@ pub enum TradSesStatus {
     _Preclose,
 }
 impl Field for TradSesStartTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 341;
     }
 }
@@ -2941,7 +2941,7 @@ pub struct TradSesStartTime {
     value: u64,
 }
 impl Field for TradSesOpenTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 342;
     }
 }
@@ -2949,7 +2949,7 @@ pub struct TradSesOpenTime {
     value: u64,
 }
 impl Field for TradSesPreCloseTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 343;
     }
 }
@@ -2957,7 +2957,7 @@ pub struct TradSesPreCloseTime {
     value: u64,
 }
 impl Field for TradSesCloseTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 344;
     }
 }
@@ -2965,7 +2965,7 @@ pub struct TradSesCloseTime {
     value: u64,
 }
 impl Field for TradSesEndTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 345;
     }
 }
@@ -2973,7 +2973,7 @@ pub struct TradSesEndTime {
     value: u64,
 }
 impl Field for NumberOfOrders {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 346;
     }
 }
@@ -2981,7 +2981,7 @@ pub struct NumberOfOrders {
     value: u16,
 }
 impl Field for MessageEncoding {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 347;
     }
 }
@@ -2993,7 +2993,7 @@ pub enum MessageEncoding {
     _Utf8,
 }
 impl Field for EncodedIssuerLen {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 348;
     }
 }
@@ -3001,7 +3001,7 @@ pub struct EncodedIssuerLen {
     value: usize,
 }
 impl Field for EncodedIssuer {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 349;
     }
 }
@@ -3009,7 +3009,7 @@ pub struct EncodedIssuer {
     value: [u8; 1024],
 }
 impl Field for EncodedSecurityDescLen {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 350;
     }
 }
@@ -3017,7 +3017,7 @@ pub struct EncodedSecurityDescLen {
     value: usize,
 }
 impl Field for EncodedSecurityDesc {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 351;
     }
 }
@@ -3025,7 +3025,7 @@ pub struct EncodedSecurityDesc {
     value: [u8; 1024],
 }
 impl Field for EncodedListExecInstLen {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 352;
     }
 }
@@ -3033,7 +3033,7 @@ pub struct EncodedListExecInstLen {
     value: usize,
 }
 impl Field for EncodedListExecInst {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 353;
     }
 }
@@ -3041,7 +3041,7 @@ pub struct EncodedListExecInst {
     value: [u8; 1024],
 }
 impl Field for EncodedTextLen {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 354;
     }
 }
@@ -3049,7 +3049,7 @@ pub struct EncodedTextLen {
     value: usize,
 }
 impl Field for EncodedText {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 355;
     }
 }
@@ -3057,7 +3057,7 @@ pub struct EncodedText {
     value: [u8; 1024],
 }
 impl Field for EncodedSubjectLen {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 356;
     }
 }
@@ -3065,7 +3065,7 @@ pub struct EncodedSubjectLen {
     value: usize,
 }
 impl Field for EncodedSubject {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 357;
     }
 }
@@ -3073,7 +3073,7 @@ pub struct EncodedSubject {
     value: [u8; 1024],
 }
 impl Field for EncodedHeadlineLen {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 358;
     }
 }
@@ -3081,7 +3081,7 @@ pub struct EncodedHeadlineLen {
     value: usize,
 }
 impl Field for EncodedHeadline {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 359;
     }
 }
@@ -3089,7 +3089,7 @@ pub struct EncodedHeadline {
     value: [u8; 1024],
 }
 impl Field for EncodedAllocTextLen {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 360;
     }
 }
@@ -3097,7 +3097,7 @@ pub struct EncodedAllocTextLen {
     value: usize,
 }
 impl Field for EncodedAllocText {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 361;
     }
 }
@@ -3105,7 +3105,7 @@ pub struct EncodedAllocText {
     value: [u8; 1024],
 }
 impl Field for EncodedUnderlyingIssuerLen {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 362;
     }
 }
@@ -3113,7 +3113,7 @@ pub struct EncodedUnderlyingIssuerLen {
     value: usize,
 }
 impl Field for EncodedUnderlyingIssuer {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 363;
     }
 }
@@ -3121,7 +3121,7 @@ pub struct EncodedUnderlyingIssuer {
     value: [u8; 1024],
 }
 impl Field for EncodedUnderlyingSecurityDescLen {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 364;
     }
 }
@@ -3129,7 +3129,7 @@ pub struct EncodedUnderlyingSecurityDescLen {
     value: usize,
 }
 impl Field for EncodedUnderlyingSecurityDesc {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 365;
     }
 }
@@ -3137,7 +3137,7 @@ pub struct EncodedUnderlyingSecurityDesc {
     value: [u8; 1024],
 }
 impl Field for AllocPrice {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 366;
     }
 }
@@ -3145,7 +3145,7 @@ pub struct AllocPrice {
     value: f32,
 }
 impl Field for QuoteSetValidUntilTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 367;
     }
 }
@@ -3153,7 +3153,7 @@ pub struct QuoteSetValidUntilTime {
     value: u64,
 }
 impl Field for QuoteEntryRejectReason {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 368;
     }
 }
@@ -3170,7 +3170,7 @@ pub enum QuoteEntryRejectReason {
     _Notauthorizedtoquotesecurity,
 }
 impl Field for LastMsgSeqNumProcessed {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 369;
     }
 }
@@ -3178,7 +3178,7 @@ pub struct LastMsgSeqNumProcessed {
     value: u16,
 }
 impl Field for OnBehalfOfSendingTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 370;
     }
 }
@@ -3186,7 +3186,7 @@ pub struct OnBehalfOfSendingTime {
     value: u64,
 }
 impl Field for RefTagID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 371;
     }
 }
@@ -3194,7 +3194,7 @@ pub struct RefTagID {
     value: u16,
 }
 impl Field for RefMsgType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 372;
     }
 }
@@ -3202,7 +3202,7 @@ pub struct RefMsgType {
     value: String,
 }
 impl Field for SessionRejectReason {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 373;
     }
 }
@@ -3222,7 +3222,7 @@ pub enum SessionRejectReason {
     _Compidproblem,
 }
 impl Field for BidRequestTransType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 374;
     }
 }
@@ -3232,7 +3232,7 @@ pub enum BidRequestTransType {
     _No,
 }
 impl Field for ContraBroker {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 375;
     }
 }
@@ -3240,7 +3240,7 @@ pub struct ContraBroker {
     value: String,
 }
 impl Field for ComplianceID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 376;
     }
 }
@@ -3248,7 +3248,7 @@ pub struct ComplianceID {
     value: String,
 }
 impl Field for SolicitedFlag {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 377;
     }
 }
@@ -3258,7 +3258,7 @@ pub enum SolicitedFlag {
     _Yes,
 }
 impl Field for ExecRestatementReason {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 378;
     }
 }
@@ -3272,7 +3272,7 @@ pub enum ExecRestatementReason {
     _Partialdeclineoforderqty,
 }
 impl Field for BusinessRejectRefID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 379;
     }
 }
@@ -3280,7 +3280,7 @@ pub struct BusinessRejectRefID {
     value: String,
 }
 impl Field for BusinessRejectReason {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 380;
     }
 }
@@ -3294,7 +3294,7 @@ pub enum BusinessRejectReason {
     _Conditionallyrequiredfieldmissing,
 }
 impl Field for GrossTradeAmt {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 381;
     }
 }
@@ -3302,7 +3302,7 @@ pub struct GrossTradeAmt {
     value: f32,
 }
 impl Field for NoContraBrokers {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 382;
     }
 }
@@ -3310,7 +3310,7 @@ pub struct NoContraBrokers {
     value: u16,
 }
 impl Field for MaxMessageSize {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 383;
     }
 }
@@ -3318,7 +3318,7 @@ pub struct MaxMessageSize {
     value: u16,
 }
 impl Field for NoMsgTypes {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 384;
     }
 }
@@ -3326,7 +3326,7 @@ pub struct NoMsgTypes {
     value: u16,
 }
 impl Field for MsgDirection {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 385;
     }
 }
@@ -3336,7 +3336,7 @@ pub enum MsgDirection {
     _Send,
 }
 impl Field for NoTradingSessions {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 386;
     }
 }
@@ -3344,7 +3344,7 @@ pub struct NoTradingSessions {
     value: u16,
 }
 impl Field for TotalVolumeTraded {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 387;
     }
 }
@@ -3352,7 +3352,7 @@ pub struct TotalVolumeTraded {
     value: f32,
 }
 impl Field for DiscretionInst {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 388;
     }
 }
@@ -3366,7 +3366,7 @@ pub enum DiscretionInst {
     _Relatedtolasttradeprice,
 }
 impl Field for DiscretionOffset {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 389;
     }
 }
@@ -3374,7 +3374,7 @@ pub struct DiscretionOffset {
     value: i8,
 }
 impl Field for BidID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 390;
     }
 }
@@ -3382,7 +3382,7 @@ pub struct BidID {
     value: String,
 }
 impl Field for ClientBidID {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 391;
     }
 }
@@ -3390,7 +3390,7 @@ pub struct ClientBidID {
     value: String,
 }
 impl Field for ListName {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 392;
     }
 }
@@ -3398,7 +3398,7 @@ pub struct ListName {
     value: String,
 }
 impl Field for TotalNumSecurities {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 393;
     }
 }
@@ -3406,7 +3406,7 @@ pub struct TotalNumSecurities {
     value: u16,
 }
 impl Field for BidType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 394;
     }
 }
@@ -3414,7 +3414,7 @@ pub struct BidType {
     value: u16,
 }
 impl Field for NumTickets {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 395;
     }
 }
@@ -3422,7 +3422,7 @@ pub struct NumTickets {
     value: u16,
 }
 impl Field for SideValue1 {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 396;
     }
 }
@@ -3430,7 +3430,7 @@ pub struct SideValue1 {
     value: f32,
 }
 impl Field for SideValue2 {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 397;
     }
 }
@@ -3438,7 +3438,7 @@ pub struct SideValue2 {
     value: f32,
 }
 impl Field for NoBidDescriptors {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 398;
     }
 }
@@ -3446,7 +3446,7 @@ pub struct NoBidDescriptors {
     value: u16,
 }
 impl Field for BidDescriptorType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 399;
     }
 }
@@ -3454,7 +3454,7 @@ pub struct BidDescriptorType {
     value: u16,
 }
 impl Field for BidDescriptor {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 400;
     }
 }
@@ -3462,7 +3462,7 @@ pub struct BidDescriptor {
     value: String,
 }
 impl Field for SideValueInd {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 401;
     }
 }
@@ -3470,7 +3470,7 @@ pub struct SideValueInd {
     value: u16,
 }
 impl Field for LiquidityPctLow {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 402;
     }
 }
@@ -3478,7 +3478,7 @@ pub struct LiquidityPctLow {
     value: f32,
 }
 impl Field for LiquidityPctHigh {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 403;
     }
 }
@@ -3486,7 +3486,7 @@ pub struct LiquidityPctHigh {
     value: f32,
 }
 impl Field for LiquidityValue {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 404;
     }
 }
@@ -3494,7 +3494,7 @@ pub struct LiquidityValue {
     value: f32,
 }
 impl Field for EFPTrackingError {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 405;
     }
 }
@@ -3502,7 +3502,7 @@ pub struct EFPTrackingError {
     value: f32,
 }
 impl Field for FairValue {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 406;
     }
 }
@@ -3510,7 +3510,7 @@ pub struct FairValue {
     value: f32,
 }
 impl Field for OutsideIndexPct {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 407;
     }
 }
@@ -3518,7 +3518,7 @@ pub struct OutsideIndexPct {
     value: f32,
 }
 impl Field for ValueOfFutures {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 408;
     }
 }
@@ -3526,7 +3526,7 @@ pub struct ValueOfFutures {
     value: f32,
 }
 impl Field for LiquidityIndType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 409;
     }
 }
@@ -3538,7 +3538,7 @@ pub enum LiquidityIndType {
     _Other,
 }
 impl Field for WtAverageLiquidity {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 410;
     }
 }
@@ -3546,7 +3546,7 @@ pub struct WtAverageLiquidity {
     value: f32,
 }
 impl Field for ExchangeForPhysical {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 411;
     }
 }
@@ -3556,7 +3556,7 @@ pub enum ExchangeForPhysical {
     _Yes,
 }
 impl Field for OutMainCntryUIndex {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 412;
     }
 }
@@ -3564,7 +3564,7 @@ pub struct OutMainCntryUIndex {
     value: f32,
 }
 impl Field for CrossPercent {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 413;
     }
 }
@@ -3572,7 +3572,7 @@ pub struct CrossPercent {
     value: f32,
 }
 impl Field for ProgRptReqs {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 414;
     }
 }
@@ -3583,7 +3583,7 @@ pub enum ProgRptReqs {
     _Realtimeexecutionreports,
 }
 impl Field for ProgPeriodInterval {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 415;
     }
 }
@@ -3591,7 +3591,7 @@ pub struct ProgPeriodInterval {
     value: u16,
 }
 impl Field for IncTaxInd {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 416;
     }
 }
@@ -3601,7 +3601,7 @@ pub enum IncTaxInd {
     _Gross,
 }
 impl Field for NumBidders {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 417;
     }
 }
@@ -3609,7 +3609,7 @@ pub struct NumBidders {
     value: u16,
 }
 impl Field for TradeType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 418;
     }
 }
@@ -3621,7 +3621,7 @@ pub enum TradeType {
     _Risktrade,
 }
 impl Field for BasisPxType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 419;
     }
 }
@@ -3642,7 +3642,7 @@ pub enum BasisPxType {
     _Others,
 }
 impl Field for NoBidComponents {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 420;
     }
 }
@@ -3650,7 +3650,7 @@ pub struct NoBidComponents {
     value: u16,
 }
 impl Field for Country {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 421;
     }
 }
@@ -3658,7 +3658,7 @@ pub struct Country {
     value: String,
 }
 impl Field for TotNoStrikes {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 422;
     }
 }
@@ -3666,7 +3666,7 @@ pub struct TotNoStrikes {
     value: u16,
 }
 impl Field for PriceType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 423;
     }
 }
@@ -3677,7 +3677,7 @@ pub enum PriceType {
     _Fixedamount,
 }
 impl Field for DayOrderQty {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 424;
     }
 }
@@ -3685,7 +3685,7 @@ pub struct DayOrderQty {
     value: f32,
 }
 impl Field for DayCumQty {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 425;
     }
 }
@@ -3693,7 +3693,7 @@ pub struct DayCumQty {
     value: f32,
 }
 impl Field for DayAvgPx {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 426;
     }
 }
@@ -3701,7 +3701,7 @@ pub struct DayAvgPx {
     value: f32,
 }
 impl Field for GTBookingInst {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 427;
     }
 }
@@ -3712,7 +3712,7 @@ pub enum GTBookingInst {
     _Accumulateuntilverballynotifiedotherwise,
 }
 impl Field for NoStrikes {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 428;
     }
 }
@@ -3720,7 +3720,7 @@ pub struct NoStrikes {
     value: u16,
 }
 impl Field for ListStatusType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 429;
     }
 }
@@ -3728,7 +3728,7 @@ pub struct ListStatusType {
     value: u16,
 }
 impl Field for NetGrossInd {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 430;
     }
 }
@@ -3738,7 +3738,7 @@ pub enum NetGrossInd {
     _Gross,
 }
 impl Field for ListOrderStatus {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 431;
     }
 }
@@ -3746,7 +3746,7 @@ pub struct ListOrderStatus {
     value: u16,
 }
 impl Field for ExpireDate {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 432;
     }
 }
@@ -3754,7 +3754,7 @@ pub struct ExpireDate {
     value: u64,
 }
 impl Field for ListExecInstType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 433;
     }
 }
@@ -3764,7 +3764,7 @@ pub enum ListExecInstType {
     _Waitforexecuteinstruction,
 }
 impl Field for CxlRejResponseTo {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 434;
     }
 }
@@ -3774,7 +3774,7 @@ pub enum CxlRejResponseTo {
     _Ordercancelreplacerequest,
 }
 impl Field for UnderlyingCouponRate {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 435;
     }
 }
@@ -3782,7 +3782,7 @@ pub struct UnderlyingCouponRate {
     value: f32,
 }
 impl Field for UnderlyingContractMultiplier {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 436;
     }
 }
@@ -3790,7 +3790,7 @@ pub struct UnderlyingContractMultiplier {
     value: f32,
 }
 impl Field for ContraTradeQty {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 437;
     }
 }
@@ -3798,7 +3798,7 @@ pub struct ContraTradeQty {
     value: f32,
 }
 impl Field for ContraTradeTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 438;
     }
 }
@@ -3806,7 +3806,7 @@ pub struct ContraTradeTime {
     value: u64,
 }
 impl Field for ClearingFirm {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 439;
     }
 }
@@ -3814,7 +3814,7 @@ pub struct ClearingFirm {
     value: String,
 }
 impl Field for ClearingAccount {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 440;
     }
 }
@@ -3822,7 +3822,7 @@ pub struct ClearingAccount {
     value: String,
 }
 impl Field for LiquidityNumSecurities {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 441;
     }
 }
@@ -3830,7 +3830,7 @@ pub struct LiquidityNumSecurities {
     value: u16,
 }
 impl Field for MultiLegReportingType {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 442;
     }
 }
@@ -3841,7 +3841,7 @@ pub enum MultiLegReportingType {
     _Multilegsecurity,
 }
 impl Field for StrikeTime {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 443;
     }
 }
@@ -3849,7 +3849,7 @@ pub struct StrikeTime {
     value: u64,
 }
 impl Field for ListStatusText {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 444;
     }
 }
@@ -3857,7 +3857,7 @@ pub struct ListStatusText {
     value: String,
 }
 impl Field for EncodedListStatusTextLen {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 445;
     }
 }
@@ -3865,7 +3865,7 @@ pub struct EncodedListStatusTextLen {
     value: usize,
 }
 impl Field for EncodedListStatusText {
-    fn tag(&self) -> u8 {
+    fn tag(&self) -> u16 {
         return 446;
     }
 }
