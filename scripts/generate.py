@@ -1,9 +1,8 @@
+""" Simple script to generate Rust source code based on a provided XML Fix message specification """
 import os
 import re
 import xml.etree.ElementTree
 from string import Template
-
-from num2words import num2words
 
 ROOT_DIR = "spec"
 
@@ -59,6 +58,7 @@ TYPES = {
 
 
 def create_fields(elements):
+    """ Creates the field module for the file's FIX spec """
     fields = F_IMPORTS + "\n"
     fixv = get_fix_version(elements)
     for field in elements.findall("fields/field"):
@@ -84,6 +84,7 @@ def create_fields(elements):
 
 
 def create_messages(elements):
+    """ Creates the message structs based on the provided FIX spec """
     fixv = get_import(get_fix_version(elements))
     messages = M_IMPORTS_TEMPLATE.substitute(fixVersion=fixv) + "\n"
     for message in elements.findall("messages/message"):
@@ -107,31 +108,38 @@ def create_messages(elements):
     messages_file.write(messages)
 
 
-def parse_file(file):
-    elements = xml.etree.ElementTree.parse(ROOT_DIR + "/" + file).getroot()
+def parse_file(file_name):
+    """ Returns the file as a parsed element tree """
+    elements = xml.etree.ElementTree.parse(
+        ROOT_DIR + "/" + file_name).getroot()
     return elements
 
 
 def get_fix_version(elements):
+    """ Gets the FIX version String for the FIX spec """
     return "{}.{}.{}.{}".format(elements.get("type"),
                                 elements.get("major"), elements.get("minor"),
                                 elements.get("servicepack"))
 
 
 def get_import(fix_version):
+    """ Gets the Rust import String for the provided FIX version"""
     return fix_version.lower().replace(".", "_")
 
 
 def get_dir(fix_version):
+    """ Gets the directory where the generated Rust source should go"""
     return "src/" + get_import(fix_version)
 
 
 def to_snake(name):
-    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
-    return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower()
+    """ Converts a string to snake_case """
+    string = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
+    return re.sub('([a-z0-9])([A-Z])', r'\1_\2', string).lower()
 
 
 def export_mods(elements):
+    """ Creates the module export file for this FIX version """
     fixv = get_fix_version(elements)
     file_dir = get_dir(fixv)
     mod_file = open(file_dir + "/mod.rs", "w")
