@@ -20,7 +20,7 @@ struct SequenceResetMessage {
 struct LogoutMessage {
     text: Option<Text>,
 }
-struct IndicationofInterestMessage {
+struct IOIMessage {
     i_o_iid: IOIid,
     i_oi_trans_type: IOITransType,
     i_oi_ref_id: Option<IOIRefID>,
@@ -329,7 +329,7 @@ struct ListStatusMessage {
     no_rpts: NoRpts,
     rpt_seq: RptSeq,
 }
-struct AllocationACKMessage {
+struct AllocationInstructionAckMessage {
     client_id: Option<ClientID>,
     exec_broker: Option<ExecBroker>,
     alloc_id: AllocID,

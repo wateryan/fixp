@@ -27,7 +27,7 @@ struct LogoutMessage {
     encoded_text_len: Option<EncodedTextLen>,
     encoded_text: Option<EncodedText>,
 }
-struct IndicationofInterestMessage {
+struct IOIMessage {
     i_o_iid: IOIid,
     i_oi_trans_type: IOITransType,
     i_oi_ref_id: Option<IOIRefID>,
@@ -538,7 +538,7 @@ struct ListStatusMessage {
     transact_time: Option<TransactTime>,
     tot_no_orders: TotNoOrders,
 }
-struct AllocationACKMessage {
+struct AllocationInstructionAckMessage {
     client_id: Option<ClientID>,
     exec_broker: Option<ExecBroker>,
     alloc_id: AllocID,

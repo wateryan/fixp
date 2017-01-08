@@ -530,14 +530,6 @@ impl Field for SenderSubID {
 pub struct SenderSubID {
     value: char,
 }
-impl Field for SendingDate {
-    fn tag(&self) -> u16 {
-        return 51;
-    }
-}
-pub struct SendingDate {
-    value: String,
-}
 impl Field for SendingTime {
     fn tag(&self) -> u16 {
         return 52;

@@ -2706,7 +2706,7 @@ impl Field for RatioQty {
     }
 }
 pub struct RatioQty {
-    value: f64,
+    value: f32,
 }
 impl Field for SecurityReqID {
     fn tag(&self) -> u16 {
@@ -2777,7 +2777,6 @@ impl Field for SecurityTradingStatus {
 pub enum SecurityTradingStatus {
     _Openingdelay,
     _Marketoncloseimbalancesell,
-    _11,
     _Nomarketimbalance,
     _Nomarketoncloseimbalance,
     _Itspreopening,
